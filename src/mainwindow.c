@@ -1,5 +1,5 @@
 /*	mainwindow.c
-	Copyright (C) 2004-2021 Mark Tyler and Dmitry Groshev
+	Copyright (C) 2004-2025 Mark Tyler and Dmitry Groshev
 
 	This file is part of mtPaint.
 
@@ -3605,8 +3605,7 @@ static void parse_drag(main_dd *dt, void **wdata, int what, void **where,
 	}
 	if (!nlayer) layer_delete(layers_total);
 
-	layer_refresh_list();
-	layer_choose(layers_total);
+	layer_refresh_list(layers_total);
 	layers_notify_changed();
 	if (layers_total) view_show();
 	set_image(TRUE);

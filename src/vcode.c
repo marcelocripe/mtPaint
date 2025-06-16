@@ -3061,12 +3061,23 @@ GtkWidget *colorlist(void **r, char *ddata)
 	return (list);
 }
 
-static void colorlist_reset_color(void **slot, int idx)
+/* !!! Full reset does NOT reset the position: no need for now */
+static void colorlist_reset(void **slot, int row)
 {
-	colorlist_data *dt = slot[2];
-	unsigned char *rgb = dt->col + idx * 3;
+	colorlist_data *dt;
+	unsigned char *rgb;
 	GdkColor c;
 
+	/* Colors are not stored, so the full reset is a repaint */
+	if (row < 0)
+	{
+		cmd_repaint(slot);
+		return;
+	}
+
+	/* Reset just one row */
+	dt = slot[2];
+	rgb = dt->col + row * 3;
 	c.pixel = 0;
 	c.red   = rgb[0] * 257;
 	c.green = rgb[1] * 257;
@@ -3075,7 +3086,7 @@ static void colorlist_reset_color(void **slot, int idx)
 	gdk_colormap_alloc_color(gdk_colormap_get_system(), &c, FALSE, TRUE);
 	/* Redraw the item displaying the color */
 	gtk_widget_queue_draw(
-		GTK_WIDGET(g_list_nth(GTK_LIST(slot[0])->children, idx)->data));
+		GTK_WIDGET(g_list_nth(GTK_LIST(slot[0])->children, row)->data));
 }
 
 static void list_scroll_in(GtkWidget *widget, gpointer user_data)
@@ -3201,23 +3212,43 @@ GtkWidget *colorlist(void **r, char *ddata)
 	return (w);
 }
 
-static void colorlist_reset_color(void **slot, int idx)
+/* !!! Full reset does NOT reset the position: no need for now */
+static void colorlist_reset(void **slot, int row)
 {
 	colorlist_data *dt = slot[2];
-	unsigned char *rgb = dt->col + idx * 3;
 	GtkTreeModel *tm = gtk_tree_view_get_model(GTK_TREE_VIEW(slot[0]));
-	GtkTreePath *tp = gtk_tree_path_new_from_indices(idx, -1);
+	GtkTreePath *tp = NULL;
 	GtkTreeIter it;
+	int n = 0, cnt = dt->cnt;
 
-	if (gtk_tree_model_get_iter(tm, &it, tp))
+	if (row >= 0) // specific row, not whole list
 	{
+		tp = gtk_tree_path_new_from_indices(row, -1);
+		if (!gtk_tree_model_get_iter(tm, &it, tp))
+			cnt = 0; // !!! Row out of range, do nothing
+		n = row;
+	}
+	// the whole list
+	else if (!gtk_tree_model_get_iter_first(tm, &it)) cnt = 0; // Paranoia
+
+	for (; n < cnt; n++)
+	{
+		unsigned char *rgb = dt->col + n * 3;
 		GdkPixbuf *p;
 		gtk_tree_model_get(tm, &it, 0, &p, -1);
 		gdk_pixbuf_fill(p, ((unsigned)MEM_2_INT(rgb, 0) << 8) + 0xFF);
 		g_object_unref(p); // !!! After get() ref'd it
-		/* Redraw the row displaying the color */
-		gtk_tree_model_row_changed(tm, tp, &it);
+		if (row >= 0) break; // one row only
+		if (!gtk_tree_model_iter_next(tm, &it)) break; // no next row
 	}
+
+	/* Do nothing if no rows affected */
+	if (!cnt);
+	/* Redraw the row displaying the color */
+	else if (row >= 0) gtk_tree_model_row_changed(tm, tp, &it);
+	/* Or the entire thing at once */
+	else gtk_widget_queue_draw(slot[0]);
+
 	gtk_tree_path_free(tp);
 }
 #endif
@@ -9512,6 +9543,10 @@ void cmd_reset(void **slot, void *ddata)
 		case op_uLISTC:
 			ulistc_reset(wdata);
 			break;
+		case op_COLORLIST: case op_COLORLISTN:
+			/* !!! Does NOT reset the position: no need for now */
+			colorlist_reset(wdata, -1);
+			break;
 		case op_CSCROLL:
 		{
 			GtkAdjustment *xa, *ya;
@@ -9621,7 +9656,6 @@ void cmd_reset(void **slot, void *ddata)
 			/* Same as in cmd_set() */
 			break;
 		case op_RPACK: case op_RPACKD:
-		case op_COLORLIST: case op_COLORLISTN:
 // !!! No ready setter functions for these (and no need of them yet)
 			break;
 		case op_COLOR:
@@ -10858,7 +10892,7 @@ void cmd_setv(void **slot, void *res, int idx)
 		((swdata *)slot[0])->value = *(int *)res;
 		break;
 	case op_COLORLIST: case op_COLORLISTN:
-		colorlist_reset_color(slot, (int)res);
+		colorlist_reset(slot, (int)res);
 		break;
 	case op_PROGRESS:
 #if GTK_MAJOR_VERSION == 3

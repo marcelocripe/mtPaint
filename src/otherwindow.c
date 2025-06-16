@@ -1,5 +1,5 @@
 /*	otherwindow.c
-	Copyright (C) 2004-2021 Mark Tyler and Dmitry Groshev
+	Copyright (C) 2004-2024 Mark Tyler and Dmitry Groshev
 
 	This file is part of mtPaint.
 
@@ -1135,7 +1135,7 @@ static void colsel_show_idx(colsel_dd *dt)
 static void color_refresh(colsel_dd *dt)
 {
 	colsel_show_idx(dt);
-	cmd_repaint(dt->clist);
+	cmd_reset(dt->clist, dt);
 }
 
 

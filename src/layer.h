@@ -1,5 +1,5 @@
 /*	layer.h
-	Copyright (C) 2005-2016 Mark Tyler and Dmitry Groshev
+	Copyright (C) 2005-2025 Mark Tyler and Dmitry Groshev
 
 	This file is part of mtPaint.
 
@@ -72,7 +72,7 @@ int load_to_layers(char *file_name, int ftype, int ani_mode);
 void layers_notify_changed();
 void layer_copy_from_main( int l );	// Copy info from main image to layer
 void layer_copy_to_main( int l );	// Copy info from layer to main image
-void layer_refresh_list();
+void layer_refresh_list(int slot);
 void layer_press_remove_all();
 int check_layers_for_changes();
 int check_layers_all_saved();
