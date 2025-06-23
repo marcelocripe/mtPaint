@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: mtpaint\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-04 21:31+0200\n"
-"PO-Revision-Date: 2025-03-12 21:35+0000\n"
+"PO-Revision-Date: 2025-06-23 21:35+0000\n"
 "Last-Translator: marcelocripe <marcelocripe@gmail.com>\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
@@ -166,7 +166,7 @@ msgstr "Você tem que salvar em um arquivo as camadas antes de criar "
 
 #: src/canvas.c:357
 msgid "The image is too large to transform."
-msgstr "A imagem é muito grande para ser transformada."
+msgstr "A imagem é muito grande para ser convertida."
 
 #: src/canvas.c:393 src/canvas.c:430 src/otherwindow.c:1613
 #: src/otherwindow.c:2524 src/otherwindow.c:2583 src/otherwindow.c:3179
@@ -216,7 +216,7 @@ msgstr "Mapa"
 
 #: src/canvas.c:429
 msgid "MT"
-msgstr "MT"
+msgstr "Mark Tyler"
 
 #: src/canvas.c:429
 msgid "Sobel"
@@ -349,7 +349,7 @@ msgstr "Quadros Compostos"
 
 #: src/canvas.c:1402
 msgid "Composited frames with nonzero delay"
-msgstr "Quadros compostos com atraso diferente de zero"
+msgstr "Quadros compostos com o tempo de atraso diferente de zero"
 
 #: src/canvas.c:1406
 msgid "Load Frames"
@@ -384,12 +384,12 @@ msgstr "O arquivo ‘%s’ tem várias páginas."
 #: src/canvas.c:1459
 #, c-format
 msgid "File is too big, must be <= to width=%i height=%i"
-msgstr "O arquivo é muito grande, deve ser menor ou igual a largura "
-"%i e a altura %i"
+msgstr "O arquivo é muito grande, tem que ser menor ou igual "
+"a largura %i e a altura %i"
 
 #: src/canvas.c:1461
 msgid "Unable to explode frames"
-msgstr "Não foi possível explodir os quadros"
+msgstr "Não foi possível descompactar os quadros"
 
 #: src/canvas.c:1463
 msgid "Unable to load file"
@@ -404,10 +404,10 @@ msgid ""
 msgstr ""
 "A biblioteca de importação dos arquivos teve que ser encerrada devido "
 "a um problema com o arquivo (possivelmente os dados da imagem estão "
-"corrompidos ou o arquivo está truncado). Foi possível carregar alguns "
-"dados, pois o cabeçalho do arquivo parece estar em bom estado, mas é "
-"recomendado que você salve esta imagem em um novo arquivo para "
-"garantir que este problema não aconteça novamente."
+"corrompidos ou o arquivo pode estar truncado). Alguns dados foram "
+"carregados com sucesso, pois o cabeçalho do arquivo parece estar em "
+"bom estado, mas é recomendado que você salve esta imagem em um novo "
+"arquivo para garantir que este problema não aconteça novamente."
 
 #: src/canvas.c:1467
 msgid "The animation is too long to load all of it into layers."
@@ -415,7 +415,7 @@ msgstr "A animação é muito grande para ser carregada toda em camadas."
 
 #: src/canvas.c:1469
 msgid "Could not explode all the frames in the animation."
-msgstr "Não foi possível explodir todos os quadros na animação."
+msgstr "Não foi possível descompactar todos os quadros da animação."
 
 #: src/canvas.c:1481 src/font.c:1556 src/fpick.c:937 src/otherwindow.c:2765
 #: src/prefs.c:321 src/toolbar.c:451
@@ -596,7 +596,7 @@ msgstr "Exportar as Imagens Desfeitas (Revertidas)"
 
 #: src/canvas.c:2217
 msgid "You must have 16 or fewer palette colours to export ASCII art."
-msgstr "Você precisa ter 16 cores ou menos na paleta para exportar "
+msgstr "Você tem que ter no máximo 16 cores na paleta para exportar "
 "uma arte no formato ASCII."
 
 #: src/canvas.c:2220
@@ -613,7 +613,7 @@ msgstr "Escolha o Diretório dos Quadros"
 
 #: src/canvas.c:2240
 msgid "You must save at least one frame to create an animated GIF."
-msgstr "Você deve ter ao menos um quadro para criar uma imagem "
+msgstr "Você tem que ter pelo menos um quadro para criar uma imagem "
 "animada no formato GIF."
 
 #: src/canvas.c:2243
@@ -724,7 +724,7 @@ msgstr "Criando o Índice das Fontes"
 
 #: src/font.c:1353
 msgid "You must select at least one directory to search for fonts."
-msgstr "Você deve selecionar ao menos um diretório para procurar "
+msgstr "Você tem que selecionar pelo menos um diretório para procurar "
 "as fontes."
 
 #: src/font.c:1529 src/font.c:1624 src/toolbar.c:609 src/viewer.c:1213
@@ -839,7 +839,7 @@ msgstr "Criar um Diretório"
 
 #: src/fpick.c:705
 msgid "Enter the name of the new directory"
-msgstr "Digite o nome do novo diretório"
+msgstr "Insira o nome do novo diretório"
 
 #: src/fpick.c:729
 #, c-format
@@ -924,9 +924,9 @@ msgid ""
 "Foundation; either version 3 of the License, or (at your option) any later "
 "version.\n"
 msgstr ""
-"O mtPaint é um programa gratuito e livre (free software), você pode "
-"redistribuí-lo e/ou modificá-lo sob os termos da Licença Pública Geral "
-"do GNU, conforme foi publicada pela Free Software Foundation, tanto a "
+"O editor de imagens mtPaint é um programa gratuito e livre (free software), "
+"você pode redistribuí-lo e/ou modificá-lo sob os termos da Licença Pública "
+"Geral do GNU, conforme foi publicada pela Free Software Foundation, tanto a "
 "versão 3 da licença, ou a seu critério qualquer outra versão posterior "
 "a esta.\n"
 
@@ -937,10 +937,10 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details.\n"
 msgstr ""
-"O mtPaint é distribuído na esperança que será útil, mas SEM QUALQUER "
-"GARANTIA, sem mesmo a garantia implícita de COMERCIALIZAÇÃO ou "
-"ADEQUAÇÃO A UM DETERMINADO PROPÓSITO. Para obter mais informações, "
-"leia a Licença Pública Geral do GNU.\n"
+"O editor de imagens mtPaint é distribuído na esperança que será útil, "
+"mas SEM QUALQUER GARANTIA, sem mesmo a garantia implícita de "
+"COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM DETERMINADO PROPÓSITO. Para obter "
+"mais informações, leia a Licença Pública Geral do GNU.\n"
 
 #: src/help.c:36
 msgid ""
@@ -951,13 +951,13 @@ msgid ""
 "Due to its simplicity and lack of dependencies it runs well on GNU/Linux, "
 "Windows and older PC hardware.\n"
 msgstr ""
-"O mtPaint é um simples programa de pintura desenvolvido com a "
-"linguagem de programação GTK+1/2/3 projetado para a criação de "
-"imagens e ícones baseados em pixels. Permite editar as imagens "
-"com as paletas de cores indexadas ou as imagens com RGB de "
-"24 bits, também oferece as ferramentas básicas de manipulação "
-"e pintura. Possibilita vários outros recursos poderosos, por "
-"exemplo, os Canais, as Camadas e a Animação. Devido a sua "
+"O editor de imagens mtPaint é um simples programa de pintura "
+"desenvolvido com a linguagem de programação GTK+1/2/3 projetado "
+"para a criação de imagens e ícones baseados em pixels. Permite "
+"editar as imagens com as paletas de cores indexadas ou as imagens "
+"com RGB de 24 bits, também oferece as ferramentas básicas de "
+"manipulação e pintura. Possibilita vários outros recursos poderosos, "
+"por exemplo, os canais, as camadas e a animação. Devido a sua "
 "simplicidade e a ausência de dependências, o editor de imagens "
 "funciona muito bem no GNU/Linux, Windows e em computadores "
 "antigos.\n"
@@ -968,9 +968,9 @@ msgid ""
 "If you don't already have this, you can download it from the mtPaint "
 "website.\n"
 msgstr ""
-"A documentação completa com as funcionalidades do mtPaint podem ser "
-"consultadas no manual. Se você não tiver o manual, você poderá "
-"baixá-lo na página eletrônica do mtPaint.\n"
+"A documentação completa com as funcionalidades do editor de imagens "
+"mtPaint podem ser consultadas no manual. Se você não tiver o manual, "
+"poderá baixá-lo na página eletrônica do mtPaint.\n"
 
 #: src/help.c:38
 msgid ""
@@ -978,8 +978,8 @@ msgid ""
 "you want to give some feedback, then the mailing lists may be of interest to "
 "you:\n"
 msgstr ""
-"Se você gosta do mtPaint e quer se manter atualizado sobre os novos "
-"lançamentos, ou se quiser dar alguma sugestão, então, utilize a lista "
+"Se você gosta do editor de imagens mtPaint e quer se manter atualizado sobre "
+"os novos lançamentos, ou se quiser dar alguma sugestão, então, utilize a lista "
 "de discussão:\n"
 
 #: src/help.c:39
@@ -1881,7 +1881,7 @@ msgid ""
 "image individually before saving the layers text file in order to load this "
 "composite image in the future."
 msgstr ""
-"Uma ou mais camadas da imagem não foram salvas. Você deve salvar "
+"Uma ou mais camadas da imagem não foram salvas. Você tem que salvar "
 "cada imagem individualmente antes de salvar o arquivo de texto das "
 "camadas para poder carregar esta imagem composta no futuro."
 
@@ -2197,7 +2197,7 @@ msgstr "O conjunto de instruções está vazio ou está incompleto"
 
 #: src/mainwindow.c:3755
 msgid "Script must begin with a command"
-msgstr "O conjunto de instruções deve começar com um comando"
+msgstr "O conjunto de instruções tem que começar com um comando"
 
 #: src/mainwindow.c:3756
 msgid "Script nesting limit exceeded"
@@ -4511,7 +4511,7 @@ msgstr "Direita"
 #~ "transferência"
 
 #~ msgid "File is too big, must be <= to width=%i height=%i : %s"
-#~ msgstr "O arquivo é muito grande, precisa ser menor ou igual a "
+#~ msgstr "O arquivo é muito grande, tem que ser menor ou igual a "
 #~ "‘%i’ de largura e ‘%i’ de altura: ‘%s’"
 
 #~ msgid "Could not open %s: %s"
