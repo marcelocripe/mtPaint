@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: mtpaint\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-04 21:31+0200\n"
-"PO-Revision-Date: 2025-06-23 21:35+0000\n"
+"PO-Revision-Date: 2025-06-24 21:35+0000\n"
 "Last-Translator: marcelocripe <marcelocripe@gmail.com>\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
@@ -321,7 +321,8 @@ msgstr "Girar Livremente"
 
 #: src/canvas.c:989 src/viewer.c:1161
 msgid "Not enough memory to create clipboard"
-msgstr "Não tem memória suficiente para criar a área de transferência"
+msgstr "Não tem memória suficiente para criar "
+"a área de transferência"
 
 #: src/canvas.c:1172
 msgid ""
@@ -349,7 +350,8 @@ msgstr "Quadros Compostos"
 
 #: src/canvas.c:1402
 msgid "Composited frames with nonzero delay"
-msgstr "Quadros compostos com o tempo de atraso diferente de zero"
+msgstr "Quadros compostos com o tempo de "
+"atraso diferente de zero"
 
 #: src/canvas.c:1406
 msgid "Load Frames"
@@ -365,7 +367,7 @@ msgstr "Carregar o Primeiro Quadro"
 
 #: src/canvas.c:1416
 msgid "Explode Frames"
-msgstr "Explodir os Quadros"
+msgstr "Descompactar os Quadros"
 
 #: src/canvas.c:1418
 msgid "View Animation"
@@ -483,11 +485,13 @@ msgstr "Sim"
 
 #: src/canvas.c:1988
 msgid "Unable to export undo images"
-msgstr "Não foi possível exportar as imagems que foram desfeitas"
+msgstr "Não foi possível exportar as "
+"imagems que foram desfeitas"
 
 #: src/canvas.c:1994
 msgid "Unable to export ASCII file"
-msgstr "Não foi possível exportar o arquivo do formato ASCII"
+msgstr "Não foi possível exportar o "
+"arquivo do formato ASCII"
 
 #: src/canvas.c:2076 src/layer.c:814 src/mainwindow.c:529
 #, c-format
@@ -724,8 +728,8 @@ msgstr "Criando o Índice das Fontes"
 
 #: src/font.c:1353
 msgid "You must select at least one directory to search for fonts."
-msgstr "Você tem que selecionar pelo menos um diretório para procurar "
-"as fontes."
+msgstr "Você tem que selecionar pelo menos um diretório para "
+"procurar as fontes."
 
 #: src/font.c:1529 src/font.c:1624 src/toolbar.c:609 src/viewer.c:1213
 #: src/viewer.c:1258
@@ -876,8 +880,8 @@ msgstr "Exibir os Arquivos Ocultos"
 
 #: src/fpick.c:929
 msgid "Case Insensitive Sort"
-msgstr "Ordenar por nome sem diferenciar entre as letras maiúsculas "
-"e minúsculas"
+msgstr "Ordenar por nome sem diferenciar entre "
+"as letras maiúsculas e minúsculas"
 
 #: src/fpick.c:936
 msgid "Name"
@@ -2201,7 +2205,8 @@ msgstr "O conjunto de instruções tem que começar com um comando"
 
 #: src/mainwindow.c:3756
 msgid "Script nesting limit exceeded"
-msgstr "O limite do aninhamento do conjunto de instruções foi excedido"
+msgstr "O limite do aninhamento do conjunto "
+"de instruções foi excedido"
 
 #: src/mainwindow.c:3765
 #, c-format
@@ -2237,7 +2242,8 @@ msgstr "Executar"
 
 #: src/mainwindow.c:4045
 msgid "Unable to load script"
-msgstr "Não foi possível carregar o conjunto de instruções"
+msgstr "Não foi possível carregar o "
+"conjunto de instruções"
 
 #: src/mainwindow.c:5182
 msgid "/_File"
@@ -3100,8 +3106,8 @@ msgstr "Redefinir"
 
 #: src/otherwindow.c:931
 msgid "New geometry is the same as now - nothing to do."
-msgstr "A nova geometria é a mesma que a atual, por tanto, não há "
-"nada a ser alterado."
+msgstr "A nova geometria é a mesma que a atual, por tanto, "
+"não há nada a ser alterado."
 
 #: src/otherwindow.c:980
 msgid "The operating system cannot allocate the memory for this operation."
@@ -3327,8 +3333,8 @@ msgstr "Utilizar a Paleta Atual"
 
 #: src/otherwindow.c:2046
 msgid "PNN Quantize (slow, better quality)"
-msgstr "Quantização do PNN (é uma opção lenta, mas possui maior "
-"qualidade)"
+msgstr "Quantização do PNN (é uma opção lenta, "
+"mas possui maior qualidade)"
 
 #: src/otherwindow.c:2047
 msgid "Wu Quantize (fast)"
@@ -3659,11 +3665,11 @@ msgstr "Semente"
 
 #: src/otherwindow.c:3160
 msgid "X span"
-msgstr "Extensão X"
+msgstr "Extensão do X"
 
 #: src/otherwindow.c:3161
 msgid "Y span"
-msgstr "Extensão Y"
+msgstr "Extensão do Y"
 
 #: src/otherwindow.c:3162
 msgid "Octaves"
@@ -3719,7 +3725,7 @@ msgstr "Não foi possível salvar os quadros ‘%d’ de ‘%d’ como ‘%s’,
 
 #: src/png.c:8809
 msgid "Explode frames"
-msgstr "Explodir os Quadros"
+msgstr "Descompactar os Quadros"
 
 #: src/prefs.c:56
 msgid "Default System Language"
@@ -3865,7 +3871,8 @@ msgstr "Otimizar os verificadores do alfa"
 
 #: src/prefs.c:184
 msgid "Disable view window transparencies"
-msgstr "Desativar as transparências da janela de visualização"
+msgstr "Desativar as transparências da janela "
+"de visualização"
 
 #: src/prefs.c:185
 msgid "Enable overlays by layer"
@@ -3884,8 +3891,8 @@ msgid ""
 msgstr ""
 "Selecione o idioma de sua preferência.\n"
 "\n"
-"Você precisa reiniciar o mtPaint para a alteração ser aplicada.\n"
-" "
+"Você precisa reiniciar o mtPaint para a "
+"alteração ser aplicada.\n"
 
 #: src/prefs.c:198
 msgid "Interface"
@@ -3909,8 +3916,8 @@ msgstr "Exibir a área de tranferência na ação de colar"
 
 #: src/prefs.c:205
 msgid "Mouse cursor = Tool"
-msgstr "O cursor ou seta permite utilizar a ferramenta que foi "
-"selecionada"
+msgstr "O cursor ou a seta permite utilizar a ferramenta "
+"que foi selecionada"
 
 #: src/prefs.c:206
 msgid "Confirm Exit"
@@ -3942,7 +3949,8 @@ msgstr "Visualizar a posição que estiver o cursor"
 
 #: src/prefs.c:214
 msgid "Mouse Scroll Wheel = Zoom"
-msgstr "A roda de rolagem permite ampliar ou reduzir a visualização"
+msgstr "A roda de rolagem permite ampliar ou "
+"reduzir a visualização"
 
 #: src/prefs.c:215
 msgid "Use menu icons"
@@ -3974,8 +3982,8 @@ msgstr "Ler as TGAs de 16 bits como 5:6:5 BGR"
 
 #: src/prefs.c:233
 msgid "Write TGAs in bottom-up row order"
-msgstr "Escrever as TGAs na ordem, ou seja, da linha de baixo "
-"para a linha cima"
+msgstr "Escrever as TGAs na ordem, ou seja, "
+"da linha de baixo para a linha cima"
 
 #: src/prefs.c:234
 msgid "Undoable image loading"
